@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI agency · Sign in and sign up</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600&family=DM+Sans:opsz,wght@9..40,400;9..40,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="ds.css">
+</head>
+<body>
+<style>
+.auth{display:grid;grid-template-columns:1fr 1fr;min-height:100vh}
+.auth .left{display:flex;flex-direction:column;padding-bottom:48px}
+.auth .left h1{font-size:52px;line-height:54px;margin-top:auto}
+.auth .left h1 span{background:linear-gradient(90deg,#B7A4FF,#7FA6FF);-webkit-background-clip:text;background-clip:text;color:transparent}
+.quote{margin-top:32px;padding:20px;border-radius:16px;background:rgba(255,255,255,.06);box-shadow:inset 0 0 0 1px rgba(255,255,255,.12);max-width:460px}
+.quote p{font-size:16px;line-height:25px;color:#E6E1FF}
+.quote .by{display:flex;gap:10px;align-items:center;margin-top:14px;font-size:14px;color:var(--on-ink-muted)}
+.auth .right{display:flex;flex-direction:column;justify-content:center}
+.aform{width:100%;max-width:400px;margin:0 auto}
+.aform h2{font-size:32px;line-height:38px}
+.aform .sub{margin-top:8px;color:var(--muted)}
+.aform .btn-lg{margin-top:24px}
+.aform .alt{margin-top:20px;text-align:center;font-size:15px;color:var(--muted)}
+.aform .row2{display:flex;justify-content:space-between;align-items:center}
+@media (max-width:860px){.auth{grid-template-columns:1fr;min-height:0}.auth .left{padding-bottom:28px}.auth .left h1{font-size:30px;line-height:34px;margin-top:12px}.auth .quote{display:none}.auth .right{padding-top:28px}.aform h2{font-size:26px;line-height:32px}}
+</style>
+<div data-st="signin"><div class="auth"><section class="stage left"><div class="hdr-in"><a class="logo on-dark" href="tutors.dc.html" aria-label="AI agency home"><svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><defs><clipPath id="hlac"><circle cx="12" cy="16" r="9"/></clipPath></defs><circle cx="12" cy="16" r="9" fill="#5B2EF0"/><circle cx="20" cy="16" r="9" fill="#2563FF"/><circle cx="20" cy="16" r="9" fill="#fff" clip-path="url(#hlac)"/></svg><span class="wm">AI agency</span></a></div><h1>One great tutor.<br><span>Every week, all year.</span></h1>
+  <div class="quote"><p>“Dr Hassan made calculus finally click. Lessons are structured and she is always patient.”</p><div class="by"><img src="img/layla.svg" alt="" style="width:32px;height:32px;border-radius:999px"><span><b style="color:#fff;font-weight:600">Mariam T.</b> · Maths with Dr Layla Hassan</span></div></div></section><section class="right"><div class="aform">
+  <h2>Welcome back</h2><p class="sub">Sign in to see your programme and message your tutor.</p>
+  
+  <div class="fld"><label for="ae">Email</label><input id="ae" class="inp " type="email" placeholder="you@example.com" autocomplete="email"  ></div>
+  <div class="fld"><div class="row2"><label for="ap">Password</label><a class="link" href="#" style="font-size:14px">Forgot password?</a></div><input id="ap" class="inp " type="password" placeholder="Your password" autocomplete="current-password"  ></div>
+  <button class="btn btn-pri btn-lg btn-block">Sign in<svg class="ic " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><polyline points="12 5 19 12 12 19"/></svg></button>
+  <p class="alt">New to AI agency? <a class="link" href="?state=signup">Create an account</a></p>
+</div></section></div></div>
+<div data-st="signup"><div class="auth"><section class="stage left"><div class="hdr-in"><a class="logo on-dark" href="tutors.dc.html" aria-label="AI agency home"><svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><defs><clipPath id="hlac"><circle cx="12" cy="16" r="9"/></clipPath></defs><circle cx="12" cy="16" r="9" fill="#5B2EF0"/><circle cx="20" cy="16" r="9" fill="#2563FF"/><circle cx="20" cy="16" r="9" fill="#fff" clip-path="url(#hlac)"/></svg><span class="wm">AI agency</span></a></div><h1>One great tutor.<br><span>Every week, all year.</span></h1>
+  <div class="quote"><p>“Dr Hassan made calculus finally click. Lessons are structured and she is always patient.”</p><div class="by"><img src="img/layla.svg" alt="" style="width:32px;height:32px;border-radius:999px"><span><b style="color:#fff;font-weight:600">Mariam T.</b> · Maths with Dr Layla Hassan</span></div></div></section><section class="right"><div class="aform">
+  <h2>Create your account</h2><p class="sub">Book a tutor for the year in under a minute.</p>
+  <div class="fld"><label for="un">Full name</label><input id="un" class="inp" placeholder="Your name" autocomplete="name"></div>
+  <div class="fld"><label for="ue">Email</label><input id="ue" class="inp" type="email" placeholder="you@example.com" autocomplete="email"></div>
+  <div class="fld"><label for="up">Password</label><input id="up" class="inp" type="password" placeholder="At least 8 characters" autocomplete="new-password"><span class="help">Use 8 or more characters.</span></div>
+  <button class="btn btn-pri btn-lg btn-block">Create account<svg class="ic " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><polyline points="12 5 19 12 12 19"/></svg></button>
+  <p class="alt">Already have an account? <a class="link" href="?state=signin">Sign in</a></p>
+</div></section></div></div>
+<div data-st="error"><div class="auth"><section class="stage left"><div class="hdr-in"><a class="logo on-dark" href="tutors.dc.html" aria-label="AI agency home"><svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><defs><clipPath id="hlac"><circle cx="12" cy="16" r="9"/></clipPath></defs><circle cx="12" cy="16" r="9" fill="#5B2EF0"/><circle cx="20" cy="16" r="9" fill="#2563FF"/><circle cx="20" cy="16" r="9" fill="#fff" clip-path="url(#hlac)"/></svg><span class="wm">AI agency</span></a></div><h1>One great tutor.<br><span>Every week, all year.</span></h1>
+  <div class="quote"><p>“Dr Hassan made calculus finally click. Lessons are structured and she is always patient.”</p><div class="by"><img src="img/layla.svg" alt="" style="width:32px;height:32px;border-radius:999px"><span><b style="color:#fff;font-weight:600">Mariam T.</b> · Maths with Dr Layla Hassan</span></div></div></section><section class="right"><div class="aform">
+  <h2>Welcome back</h2><p class="sub">Sign in to see your programme and message your tutor.</p>
+  <div class="al err" role="alert" style="margin-top:20px"><svg class="ic " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m10.29 3.86-8.18 14.14A2 2 0 0 0 3.82 21h16.36a2 2 0 0 0 1.71-3L11.71 3.86a2 2 0 0 0-1.42 0z" transform="translate(0 0)"/><path d="M12 9v4M12 17h.01"/></svg><div><b>That email and password don't match</b>Check them and try again, or reset your password.</div></div>
+  <div class="fld"><label for="ae">Email</label><input id="ae" class="inp bad" type="email" placeholder="you@example.com" autocomplete="email" value="noor@example.com" ></div>
+  <div class="fld"><div class="row2"><label for="ap">Password</label><a class="link" href="#" style="font-size:14px">Forgot password?</a></div><input id="ap" class="inp bad" type="password" placeholder="Your password" autocomplete="current-password" value="password1" ></div>
+  <button class="btn btn-pri btn-lg btn-block">Sign in<svg class="ic " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><polyline points="12 5 19 12 12 19"/></svg></button>
+  <p class="alt">New to AI agency? <a class="link" href="?state=signup">Create an account</a></p>
+</div></section></div></div>
+<div data-st="loading"><div class="auth"><section class="stage left"><div class="hdr-in"><a class="logo on-dark" href="tutors.dc.html" aria-label="AI agency home"><svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><defs><clipPath id="hlac"><circle cx="12" cy="16" r="9"/></clipPath></defs><circle cx="12" cy="16" r="9" fill="#5B2EF0"/><circle cx="20" cy="16" r="9" fill="#2563FF"/><circle cx="20" cy="16" r="9" fill="#fff" clip-path="url(#hlac)"/></svg><span class="wm">AI agency</span></a></div><h1>One great tutor.<br><span>Every week, all year.</span></h1>
+  <div class="quote"><p>“Dr Hassan made calculus finally click. Lessons are structured and she is always patient.”</p><div class="by"><img src="img/layla.svg" alt="" style="width:32px;height:32px;border-radius:999px"><span><b style="color:#fff;font-weight:600">Mariam T.</b> · Maths with Dr Layla Hassan</span></div></div></section><section class="right"><div class="aform">
+  <h2>Welcome back</h2><p class="sub">Sign in to see your programme and message your tutor.</p>
+  
+  <div class="fld"><label for="ae">Email</label><input id="ae" class="inp " type="email" placeholder="you@example.com" autocomplete="email" value="noor@example.com" disabled></div>
+  <div class="fld"><div class="row2"><label for="ap">Password</label><a class="link" href="#" style="font-size:14px">Forgot password?</a></div><input id="ap" class="inp " type="password" placeholder="Your password" autocomplete="current-password" value="password1" disabled></div>
+  <button class="btn btn-pri btn-lg btn-block busy" aria-busy="true"><span class="spin"></span>Signing in…</button>
+  <p class="alt">New to AI agency? <a class="link" href="?state=signup">Create an account</a></p>
+</div></section></div></div>
+<div class="dsw" role="group" aria-label="Design states (not part of the app)"><span>States</span><button data-go="signin">Sign in</button><button data-go="signup">Sign up</button><button data-go="error">Error</button><button data-go="loading">Loading</button></div>
+<script>
+(function () {
+  var q = new URLSearchParams(location.search);
+  if (q.get('shot')) { var d = document.querySelector('.dsw'); if (d) d.remove(); }
+  var els = [].slice.call(document.querySelectorAll('[data-st]'));
+  var names = [].slice.call(document.querySelectorAll('[data-go]')).map(function (b) { return b.dataset.go; });
+  function show(s) {
+    els.forEach(function (e) { e.hidden = e.dataset.st.split(' ').indexOf(s) < 0 && e.dataset.st !== '*'; });
+    document.querySelectorAll('[data-go]').forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.go === s); });
+  }
+  var s = q.get('state'); if (!s || (names.length && names.indexOf(s) < 0)) s = names[0] || 'default';
+  show(s);
+  document.querySelectorAll('[data-go]').forEach(function (b) { b.addEventListener('click', function () { show(b.dataset.go); history.replaceState(null, '', '?state=' + b.dataset.go); }); });
+  document.querySelectorAll('[data-chip]').forEach(function (c) {
+    c.addEventListener('click', function () {
+      if (c.disabled) return;
+      c.closest('[data-st]') && c.closest('[data-st]').querySelectorAll('[data-chip]').forEach(function (o) { o.setAttribute('aria-pressed', 'false'); });
+      c.setAttribute('aria-pressed', 'true');
+      document.querySelectorAll('[data-sel]').forEach(function (x) { x.textContent = c.dataset.chip; });
+    });
+  });
+  document.querySelectorAll('[data-pill]').forEach(function (p) {
+    p.addEventListener('click', function () { p.parentElement.querySelectorAll('[data-pill]').forEach(function (o) { o.setAttribute('aria-pressed', 'false'); }); p.setAttribute('aria-pressed', 'true'); });
+  });
+  document.querySelectorAll('.starin').forEach(function (g) {
+    var bs = [].slice.call(g.querySelectorAll('button'));
+    bs.forEach(function (b, i) { b.addEventListener('click', function () { bs.forEach(function (o, j) { o.classList.toggle('on', j <= i); o.setAttribute('aria-pressed', j === i); }); }); });
+  });
+})();
+</script>
+</body>
+</html>

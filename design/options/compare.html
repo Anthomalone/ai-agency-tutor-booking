@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI agency · Compare options</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F4F4F7;--surface:#fff;--text:#14142B;--muted:#5D5D78;--border:#E3E3EC;--accent:#4B45E0}
+*{box-sizing:border-box;margin:0}
+body{background:var(--bg);color:var(--text);font:400 15px/22px Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+header{position:sticky;top:0;z-index:5;background:rgba(244,244,247,.88);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.bar{max-width:1600px;margin:0 auto;padding:16px 24px;display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+h1{font-size:18px;font-weight:600;letter-spacing:-.01em}
+h1 span{color:var(--muted);font-weight:400}
+.seg{display:inline-flex;padding:4px;border-radius:10px;background:#E9E9F0;gap:2px}
+.seg button{height:36px;padding:0 14px;border:0;border-radius:7px;background:none;font:600 14px Inter,sans-serif;color:var(--muted);cursor:pointer}
+.seg button[aria-pressed=true]{background:#fff;color:var(--text);box-shadow:0 1px 2px rgba(0,0,0,.08)}
+.seg button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.ctrls{display:flex;gap:12px;flex-wrap:wrap}
+main{max-width:1600px;margin:0 auto;padding:24px}
+.cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;align-items:start}
+.col{background:var(--surface);border-radius:16px;box-shadow:0 0 0 1px var(--border),0 8px 24px -16px rgba(20,20,43,.2);overflow:hidden}
+.col-h{padding:20px;border-bottom:1px solid var(--border)}
+.col-h .k{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.col-h h2{font-size:22px;line-height:28px;letter-spacing:-.02em;margin-top:4px;display:flex;gap:10px;align-items:center}
+.col-h h2 img{height:28px}
+.col-h p{color:var(--muted);margin-top:2px}
+.dots{display:flex;gap:6px;margin-top:12px}.dots i{width:22px;height:22px;border-radius:6px;box-shadow:inset 0 0 0 1px rgba(0,0,0,.08)}
+.links{display:flex;flex-wrap:wrap;gap:6px 14px;margin-top:12px;font-size:14px;font-weight:600}
+.links a{color:var(--accent);text-decoration:none}.links a:hover{text-decoration:underline}
+.shot{background:#ECECF2;padding:16px;max-height:1400px;overflow:auto}
+.shot img{display:block;width:100%;border-radius:8px;box-shadow:0 0 0 1px var(--border),0 8px 24px -12px rgba(20,20,43,.25)}
+.shot.phone img{max-width:300px;margin:0 auto;border-radius:20px}
+.rec{display:inline-flex;align-items:center;height:24px;padding:0 10px;border-radius:999px;background:#E7F6EE;color:#0B6B47;font-size:12px;font-weight:600;margin-left:auto}
+table{width:100%;border-collapse:collapse;margin-top:32px;background:var(--surface);border-radius:16px;overflow:hidden;box-shadow:0 0 0 1px var(--border)}
+th,td{text-align:left;padding:14px 16px;border-bottom:1px solid var(--border);vertical-align:top;font-size:14px}
+th{font-weight:600;color:var(--muted);width:180px}
+tr:last-child td,tr:last-child th{border-bottom:0}
+@media (max-width:1000px){.cols{grid-template-columns:1fr}.bar{padding:12px 16px}main{padding:16px}th{width:110px}}
+</style>
+</head>
+<body>
+<header><div class="bar">
+  <h1>AI agency <span>· three design options</span></h1>
+  <div class="ctrls">
+    <div class="seg" role="group" aria-label="Screen" id="scr"><button data-v="tutors" aria-pressed="true">Tutor list</button><button data-v="tutor" aria-pressed="false">Tutor page</button><button data-v="checkout" aria-pressed="false">Checkout</button><button data-v="index" aria-pressed="false">Identity</button></div>
+    <div class="seg" role="group" aria-label="Width" id="wd"><button data-v="1440" aria-pressed="true">Desktop 1440</button><button data-v="390" aria-pressed="false">Phone 390</button></div>
+  </div>
+</div></header>
+<main>
+  <div class="cols">
+    <section class="col" data-o="option-a">
+      <div class="col-h"><div class="k">Option A</div><h2><img src="option-a/logo-mark.svg" alt="">Clear Day</h2><p>Calm · trusted · refined</p>
+        <div class="dots"><i style="background:#2F4FE0"></i><i style="background:#7455EA"></i><i style="background:#0F1634"></i><i style="background:#F6F7FB"></i></div>
+        <div class="links"><a href="option-a/index.html">Identity sheet</a><a href="option-a/tutors.html">Open live mock-up</a></div></div>
+      <div class="shot"><img alt="Option A screenshot"></div>
+    </section>
+    <section class="col" data-o="option-b">
+      <div class="col-h"><div class="k" style="display:flex">Option B<span class="rec">Recommended</span></div><h2><img src="option-b/logo-mark.svg" alt="">Midnight Spark</h2><p>Bold · modern · sharp</p>
+        <div class="dots"><i style="background:#5B2EF0"></i><i style="background:#2563FF"></i><i style="background:#0D0930"></i><i style="background:#F7F6FD"></i></div>
+        <div class="links"><a href="option-b/index.html">Identity sheet</a><a href="option-b/tutors.html">Open live mock-up</a></div></div>
+      <div class="shot"><img alt="Option B screenshot"></div>
+    </section>
+    <section class="col" data-o="option-c">
+      <div class="col-h"><div class="k">Option C</div><h2><img src="option-c/logo-mark.svg" alt="">Lilac Cloud</h2><p>Soft · friendly · warm</p>
+        <div class="dots"><i style="background:#4B57E6"></i><i style="background:#9D7BFF"></i><i style="background:#251B4F"></i><i style="background:#F6F3FF"></i></div>
+        <div class="links"><a href="option-c/index.html">Identity sheet</a><a href="option-c/tutors.html">Open live mock-up</a></div></div>
+      <div class="shot"><img alt="Option C screenshot"></div>
+    </section>
+  </div>
+  <table>
+    <tr><th></th><td><b>A · Clear Day</b></td><td><b>B · Midnight Spark</b></td><td><b>C · Lilac Cloud</b></td></tr>
+    <tr><th>Feels like</th><td>A well-run private school: quiet, editorial, trustworthy</td><td>A confident tech product: deep ink stage, electric violet</td><td>A small friendly team: soft lilac, rounded, personal</td></tr>
+    <tr><th>Fonts</th><td>Fraunces (headings) + Inter</td><td>Bricolage Grotesque (headings) + DM Sans</td><td>Plus Jakarta Sans + Instrument Serif italic accents</td></tr>
+    <tr><th>Lead colours</th><td>Cobalt #2F4FE0, violet #7455EA</td><td>Violet #5B2EF0 → blue #2563FF, ink #0D0930</td><td>Periwinkle #4B57E6, lavender #9D7BFF</td></tr>
+    <tr><th>Tutor list</th><td>Photo cards in a grid</td><td>A clean table of tutors on a dark hero</td><td>Big rounded cards, 2 across on phones</td></tr>
+    <tr><th>Weekly time picker</th><td>One row per day</td><td>A week calendar (day tabs on phones)</td><td>Day tabs, then that day's times</td></tr>
+    <tr><th>Checkout</th><td>Summary + 52-lesson dot strip, card form beside it</td><td>Split screen: dark year dial, white payment side</td><td>One centred sheet with lessons-per-month bars</td></tr>
+    <tr><th>Best for</th><td>Parents who value calm and seriousness</td><td>Standing out and feeling premium and modern</td><td>Warmth and reassurance for younger students</td></tr>
+  </table>
+</main>
+<script>
+var s='tutors',w='1440';
+function draw(){document.querySelectorAll('.col').forEach(function(c){var b=c.querySelector('.shot'),i=b.querySelector('img');i.src=c.dataset.o+'/screens/'+s+'-'+w+'.png';b.classList.toggle('phone',w==='390');});}
+function seg(id,f){document.querySelectorAll('#'+id+' button').forEach(function(btn){btn.addEventListener('click',function(){document.querySelectorAll('#'+id+' button').forEach(function(o){o.setAttribute('aria-pressed','false')});btn.setAttribute('aria-pressed','true');f(btn.dataset.v);draw();});});}
+seg('scr',function(v){s=v});seg('wd',function(v){w=v});draw();
+</script>
+</body>
+</html>
