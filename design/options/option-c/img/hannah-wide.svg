@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-60 90 520 416" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Portrait illustration of Hannah Clarke">
+  <defs>
+    <linearGradient id="bgCwhannah" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F1E2FF"/><stop offset="1" stop-color="#DFC8FB"/></linearGradient>
+    <linearGradient id="clCwhannah" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7B55D9"/><stop offset="1" stop-color="#6546b2"/></linearGradient>
+    <clipPath id="cpCwhannah"><rect x="-60" y="90" width="520" height="416"/></clipPath>
+  </defs>
+  <g clip-path="url(#cpCwhannah)">
+  <rect x="-60" y="90" width="520" height="416" fill="url(#bgCwhannah)"/>
+  <circle cx="330" cy="120" r="130" fill="#fff" opacity=".28"/><circle cx="60" cy="430" r="90" fill="#fff" opacity=".16"/>
+  <g transform="translate(200 520) scale(1) translate(-200 -520)">
+  <path d="M128 255C118 168 160 144 200 144s82 24 72 111l16 150H112z" fill="#8A4B2D"/>
+  <path d="M40 520C40 420 110 372 200 372s160 48 160 148z" fill="url(#clCwhannah)"/>
+  <path d="M200 372c-30 0-48 6-62 16l62 56 62-56c-14-10-32-16-62-16z" fill="#F0C7A4" opacity="1"/>
+  <rect x="172" y="318" width="56" height="72" rx="24" fill="#dfb999"/>
+  <ellipse cx="137" cy="266" rx="11" ry="17" fill="#d3af90"/><ellipse cx="263" cy="266" rx="11" ry="17" fill="#d3af90"/>
+  
+  <ellipse cx="200" cy="256" rx="64" ry="78" fill="#F0C7A4"/>
+  <path d="M154 300c12 22 30 32 46 32s34-10 46-32c-8 30-26 46-46 46s-38-16-46-46z" fill="#d3af90" opacity=".35"/>
+  <ellipse cx="200" cy="262" rx="64" ry="72" fill="none"/>
+  <path d="M136 232c6-44 40-62 70-58 34 4 58 24 60 58-22-26-48-34-76-30-22 4-42 14-54 30z" fill="#8A4B2D"/>
+  <path d="M148 200c18-26 52-36 86-24" fill="none" stroke="#fff" stroke-opacity=".16" stroke-width="6" stroke-linecap="round"/>
+  <g><path d="M166 244q12-7 24 0M210 244q12-7 24 0" fill="none" stroke="#965d42" stroke-width="4" stroke-linecap="round"/><path d="M197 268q-4 10 1 14" fill="none" stroke="#d3af90" stroke-width="3.5" stroke-linecap="round"/><ellipse cx="178" cy="262" rx="4.5" ry="5.5" fill="#2a1c28"/><ellipse cx="222" cy="262" rx="4.5" ry="5.5" fill="#2a1c28"/><path d="M186 290q14 12 28 0" fill="none" stroke="#2a1c28" stroke-width="4.5" stroke-linecap="round"/><ellipse cx="164" cy="284" rx="10" ry="6" fill="#ff7a8a" opacity=".22"/><ellipse cx="236" cy="284" rx="10" ry="6" fill="#ff7a8a" opacity=".22"/></g>
+  </g></g></svg>

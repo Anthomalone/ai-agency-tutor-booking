@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI agency · Chat (/chat/[id])</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600&family=DM+Sans:opsz,wght@9..40,400;9..40,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="ds.css">
+</head>
+<body>
+<style>
+.chat-wrap{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:24px;padding-top:24px;padding-bottom:24px;height:calc(100vh - 76px)}
+.conv{display:flex;flex-direction:column;min-height:0;overflow:hidden}
+.conv .ch{flex:none}
+.peer{display:flex;align-items:center;gap:12px}
+.peer img{width:44px;height:44px;border-radius:12px;object-fit:cover;object-position:50% 28%}
+.peer b{display:block;font-weight:600}.peer span{font-size:13px;color:var(--muted)}
+.msgs{flex:1;overflow:auto;padding:24px;display:flex;flex-direction:column;gap:8px;background:linear-gradient(180deg,#FCFBFF,#F8F7FE)}
+.sep{align-self:center;margin:12px 0;height:28px;padding:0 12px;border-radius:999px;background:#fff;box-shadow:0 0 0 1px var(--border);font-size:12px;font-weight:600;color:var(--muted);display:inline-flex;align-items:center}
+.msg{max-width:72%;padding:10px 14px;border-radius:16px;font-size:15px;line-height:22px;position:relative}
+.msg time{display:block;margin-top:4px;font-size:11px;line-height:14px;font-variant-numeric:tabular-nums}
+.msg.them{align-self:flex-start;background:#fff;box-shadow:0 0 0 1px var(--border),0 1px 2px rgba(18,13,53,.04);border-bottom-left-radius:6px}
+.msg.them time{color:var(--muted)}
+.msg.me{align-self:flex-end;background:var(--grad);color:#fff;border-bottom-right-radius:6px;box-shadow:0 6px 16px -8px rgba(73,56,245,.6)}
+.msg.me time{color:rgba(255,255,255,.8);text-align:right}
+.msg.fail{background:#fff;color:var(--text);box-shadow:0 0 0 1.5px var(--error)}
+.msg.fail time{color:var(--error);display:flex;gap:6px;align-items:center;justify-content:flex-end;font-size:12px;font-weight:600}
+.msg.fail time a{color:var(--error);text-decoration:underline;min-height:24px;display:inline-flex;align-items:center}
+.comp{flex:none;display:flex;gap:12px;align-items:flex-end;padding:16px;border-top:1px solid var(--border);background:#fff}
+.comp textarea{min-height:48px;height:48px;resize:none;flex:1;padding:12px 14px}
+.side .card2{padding:20px}
+.side h3{font-size:15px}
+.chat-wrap .es{margin:auto}
+.toasts{bottom:104px}
+@media (max-width:860px){.chat-wrap{grid-template-columns:1fr;padding:0;height:calc(100vh - 64px);gap:0}.conv{border-radius:0!important;box-shadow:none!important}.side{display:none}.msgs{padding:16px}.msg{max-width:84%}.comp{padding:12px}.comp .btn .lb{display:none}.comp .btn{width:48px;padding:0}}
+@media (max-width:860px){.d-only2{display:none!important}}@media (min-width:861px){.m-only{display:none!important}}</style>
+<div class="stage"><header class="hdr dark"><div class="wrap hdr-in"><a class="logo on-dark" href="tutors.dc.html" aria-label="AI agency home"><svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><defs><clipPath id="hpcc"><circle cx="12" cy="16" r="9"/></clipPath></defs><circle cx="12" cy="16" r="9" fill="#5B2EF0"/><circle cx="20" cy="16" r="9" fill="#2563FF"/><circle cx="20" cy="16" r="9" fill="#fff" clip-path="url(#hpcc)"/></svg><span class="wm">AI agency</span></a><nav class="hdr-r"><div class="nl"><a href="tutors.dc.html" >Tutors</a><a href="programme.dc.html" >My programme</a><a href="chat.dc.html" aria-current="page">Messages<span class="dot">1</span></a></div><a class="acct" href="#" aria-label="Account menu"><span class="ini sm">NA</span><span class="nm">Noor</span><svg class="ic " width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></a><button class="menu-b" aria-label="Open menu"><svg class="ic " width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button></nav></div></header></div>
+<main class="wrap chat-wrap">
+  <section class="card2 conv">
+    <div class="ch"><div class="peer"><a class="link m-only" href="programme.dc.html" aria-label="Back" style="width:44px;justify-content:center;margin-left:-12px"><svg class="ic " width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg></a><img src="img/layla.svg" alt=""><div><b>Dr Layla Hassan</b><span>Your tutor · Tuesdays 17:00 GST</span></div></div><a class="btn btn-sec btn-sm d-only2" href="programme.dc.html"><svg class="ic " width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>My programme</a></div>
+    <div data-st="default"><div class="msgs" aria-live="polite">
+  <span class="sep">Mon 23 Nov 2026 · GST</span>
+  <div class="msg them">Hi Noor! Looking forward to our first lesson on Tuesday.<time>18:02</time></div>
+  <div class="msg me">Thank you! Should I bring my past exam papers?<time>18:10</time></div>
+  <div class="msg them">Yes please, bring the last two. We will start with whatever felt hardest.<time>18:14</time></div>
+  <span class="sep">Today · Mon 1 Feb 2027 · GST</span>
+  <div class="msg me">I finished the integration worksheet. Question 6 was tricky!<time>16:40</time></div>
+  <div class="msg them">Great work, Noor. We will go through question 6 first, tomorrow at 17:00 GST.<time>16:52</time></div></div><div class="comp"><textarea class="inp" placeholder="Message Dr Hassan" aria-label="Message"></textarea><button class="btn btn-pri"><svg class="ic " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4z"/><path d="M22 2 11 13"/></svg><span class="lb">Send</span></button></div></div>
+    <div data-st="failed"><div class="msgs" aria-live="polite">
+  <span class="sep">Mon 23 Nov 2026 · GST</span>
+  <div class="msg them">Hi Noor! Looking forward to our first lesson on Tuesday.<time>18:02</time></div>
+  <div class="msg me">Thank you! Should I bring my past exam papers?<time>18:10</time></div>
+  <div class="msg them">Yes please, bring the last two. We will start with whatever felt hardest.<time>18:14</time></div>
+  <span class="sep">Today · Mon 1 Feb 2027 · GST</span>
+  <div class="msg me">I finished the integration worksheet. Question 6 was tricky!<time>16:40</time></div>
+  <div class="msg them">Great work, Noor. We will go through question 6 first, tomorrow at 17:00 GST.<time>16:52</time></div><div class="msg me fail">Can we also look at last year's paper 2?<time><svg class="ic " width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m10.29 3.86-8.18 14.14A2 2 0 0 0 3.82 21h16.36a2 2 0 0 0 1.71-3L11.71 3.86a2 2 0 0 0-1.42 0z" transform="translate(0 0)"/><path d="M12 9v4M12 17h.01"/></svg>Not sent · <a href="#">Tap to retry</a></time></div></div><div class="comp"><textarea class="inp" placeholder="Message Dr Hassan" aria-label="Message"></textarea><button class="btn btn-pri"><svg class="ic " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4z"/><path d="M22 2 11 13"/></svg><span class="lb">Send</span></button></div></div>
+    <div data-st="empty"><div class="msgs"><div class="es "><span class="art"><svg class="ic " width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span><h3>Say hello to Dr Hassan</h3><p>Introduce yourself or ask what to bring to your first lesson on Tue 24 Nov, 17:00 GST.</p></div></div><div class="comp"><textarea class="inp" placeholder="Message Dr Hassan" aria-label="Message">Hi Dr Hassan! </textarea><button class="btn btn-pri"><svg class="ic " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4z"/><path d="M22 2 11 13"/></svg><span class="lb">Send</span></button></div></div>
+    <div data-st="loading"><div class="msgs" aria-hidden="true"><span class="sk" style="align-self:flex-start;width:55%;height:44px;border-radius:16px"></span><span class="sk" style="align-self:flex-end;width:45%;height:44px;border-radius:16px"></span><span class="sk" style="align-self:flex-start;width:62%;height:64px;border-radius:16px"></span><span class="sk" style="align-self:flex-end;width:38%;height:44px;border-radius:16px"></span></div><div class="comp"><span class="sk" style="flex:1;height:48px;border-radius:10px"></span><span class="sk" style="width:96px;height:48px;border-radius:10px"></span></div></div>
+    <div data-st="error"><div class="msgs"><div class="es err"><span class="art"><svg class="ic " width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m10.29 3.86-8.18 14.14A2 2 0 0 0 3.82 21h16.36a2 2 0 0 0 1.71-3L11.71 3.86a2 2 0 0 0-1.42 0z" transform="translate(0 0)"/><path d="M12 9v4M12 17h.01"/></svg></span><h3>We couldn't load your messages</h3><p>Check your connection and try again. If it keeps happening, message us and we will sort it out.</p><button class="btn btn-sec"><svg class="ic " width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>Try again</button></div></div></div>
+  </section>
+  <aside class="side"><div class="card2"><span class="muted small">Next lesson</span><div style="font:600 22px/28px var(--disp);letter-spacing:-.02em;margin-top:4px" class="tnum">Tue 2 Feb · 17:00 GST</div><p class="muted small" style="margin-top:4px">Lesson 11 of 52 · tomorrow</p></div>
+  <div class="card2"><h3>About chat</h3><p class="muted small" style="margin-top:6px">Messages are only between you and Dr Hassan. She usually replies within a day.</p></div></aside>
+</main>
+<div data-st="failed"><div class="toasts"><div class="toast e" role="status"><span class="ti"><svg class="ic " width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m10.29 3.86-8.18 14.14A2 2 0 0 0 3.82 21h16.36a2 2 0 0 0 1.71-3L11.71 3.86a2 2 0 0 0-1.42 0z" transform="translate(0 0)"/><path d="M12 9v4M12 17h.01"/></svg></span><span><b>Message not sent.</b> Check your connection.</span><a href="#">Retry</a></div></div></div>
+<div class="dsw" role="group" aria-label="Design states (not part of the app)"><span>States</span><button data-go="default">Default</button><button data-go="failed">Message failed</button><button data-go="empty">Empty</button><button data-go="loading">Loading</button><button data-go="error">Error</button></div>
+<script>
+(function () {
+  var q = new URLSearchParams(location.search);
+  if (q.get('shot')) { var d = document.querySelector('.dsw'); if (d) d.remove(); }
+  var els = [].slice.call(document.querySelectorAll('[data-st]'));
+  var names = [].slice.call(document.querySelectorAll('[data-go]')).map(function (b) { return b.dataset.go; });
+  function show(s) {
+    els.forEach(function (e) { e.hidden = e.dataset.st.split(' ').indexOf(s) < 0 && e.dataset.st !== '*'; });
+    document.querySelectorAll('[data-go]').forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.go === s); });
+  }
+  var s = q.get('state'); if (!s || (names.length && names.indexOf(s) < 0)) s = names[0] || 'default';
+  show(s);
+  document.querySelectorAll('[data-go]').forEach(function (b) { b.addEventListener('click', function () { show(b.dataset.go); history.replaceState(null, '', '?state=' + b.dataset.go); }); });
+  document.querySelectorAll('[data-chip]').forEach(function (c) {
+    c.addEventListener('click', function () {
+      if (c.disabled) return;
+      c.closest('[data-st]') && c.closest('[data-st]').querySelectorAll('[data-chip]').forEach(function (o) { o.setAttribute('aria-pressed', 'false'); });
+      c.setAttribute('aria-pressed', 'true');
+      document.querySelectorAll('[data-sel]').forEach(function (x) { x.textContent = c.dataset.chip; });
+    });
+  });
+  document.querySelectorAll('[data-pill]').forEach(function (p) {
+    p.addEventListener('click', function () { p.parentElement.querySelectorAll('[data-pill]').forEach(function (o) { o.setAttribute('aria-pressed', 'false'); }); p.setAttribute('aria-pressed', 'true'); });
+  });
+  document.querySelectorAll('.starin').forEach(function (g) {
+    var bs = [].slice.call(g.querySelectorAll('button'));
+    bs.forEach(function (b, i) { b.addEventListener('click', function () { bs.forEach(function (o, j) { o.classList.toggle('on', j <= i); o.setAttribute('aria-pressed', j === i); }); }); });
+  });
+})();
+</script>
+</body>
+</html>
